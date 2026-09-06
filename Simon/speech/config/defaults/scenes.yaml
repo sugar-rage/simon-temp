@@ -1,0 +1,145 @@
+# Per-scene parameter profiles for adaptive decoding.
+# Each scene type maps to STT, VAD, and DSP parameters tuned for that environment.
+
+scenes:
+  quiet_room:
+    stt:
+      beam_size: 3
+      temperature: 0.0
+      patience: 1.0
+      best_of: 1
+      no_speech_threshold: 0.6
+      log_prob_threshold: -1.0
+      compression_ratio_threshold: 2.4
+    vad:
+      speech_threshold: 0.45
+    wakeword:
+      detection_threshold: 0.65
+    dsp:
+      noise_suppression_level: 0.2
+      agc_target_rms: 2500.0
+
+  office:
+    stt:
+      beam_size: 5
+      temperature: 0.0
+      patience: 1.0
+      best_of: 3
+      no_speech_threshold: 0.5
+      log_prob_threshold: -1.0
+      compression_ratio_threshold: 2.4
+    vad:
+      speech_threshold: 0.50
+    wakeword:
+      detection_threshold: 0.70
+    dsp:
+      noise_suppression_level: 0.4
+      agc_target_rms: 3000.0
+
+  classroom:
+    stt:
+      beam_size: 5
+      temperature: 0.0
+      patience: 1.2
+      best_of: 3
+      no_speech_threshold: 0.5
+      log_prob_threshold: -1.0
+      compression_ratio_threshold: 2.4
+    vad:
+      speech_threshold: 0.50
+    wakeword:
+      detection_threshold: 0.70
+    dsp:
+      noise_suppression_level: 0.4
+      agc_target_rms: 3000.0
+
+  home:
+    stt:
+      beam_size: 5
+      temperature: 0.0
+      patience: 1.0
+      best_of: 1
+      no_speech_threshold: 0.5
+      log_prob_threshold: -1.0
+      compression_ratio_threshold: 2.4
+    vad:
+      speech_threshold: 0.48
+    wakeword:
+      detection_threshold: 0.68
+    dsp:
+      noise_suppression_level: 0.3
+      agc_target_rms: 2800.0
+
+  street:
+    stt:
+      beam_size: 8
+      temperature: 0.0
+      patience: 1.5
+      best_of: 5
+      no_speech_threshold: 0.4
+      log_prob_threshold: -1.5
+      compression_ratio_threshold: 2.8
+    vad:
+      speech_threshold: 0.60
+    wakeword:
+      detection_threshold: 0.80
+    dsp:
+      noise_suppression_level: 0.7
+      agc_target_rms: 4000.0
+
+  bus_train:
+    stt:
+      beam_size: 8
+      temperature: 0.0
+      patience: 1.5
+      best_of: 5
+      no_speech_threshold: 0.3
+      log_prob_threshold: -1.5
+      compression_ratio_threshold: 2.8
+    vad:
+      speech_threshold: 0.60
+    wakeword:
+      detection_threshold: 0.80
+    dsp:
+      noise_suppression_level: 0.8
+      agc_target_rms: 4500.0
+
+  shopping_mall:
+    stt:
+      beam_size: 8
+      temperature: 0.0
+      patience: 1.5
+      best_of: 5
+      no_speech_threshold: 0.4
+      log_prob_threshold: -1.5
+      compression_ratio_threshold: 2.8
+    vad:
+      speech_threshold: 0.55
+    wakeword:
+      detection_threshold: 0.78
+    dsp:
+      noise_suppression_level: 0.6
+      agc_target_rms: 3500.0
+
+  very_noisy:
+    stt:
+      beam_size: 10
+      temperature: 0.0
+      patience: 2.0
+      best_of: 5
+      no_speech_threshold: 0.3
+      log_prob_threshold: -2.0
+      compression_ratio_threshold: 3.0
+    vad:
+      speech_threshold: 0.65
+    wakeword:
+      detection_threshold: 0.85
+    dsp:
+      noise_suppression_level: 1.0
+      agc_target_rms: 5000.0
+
+# Classification settings
+classifier:
+  classification_interval_s: 3.0
+  ema_alpha: 0.3
+  history_size: 5

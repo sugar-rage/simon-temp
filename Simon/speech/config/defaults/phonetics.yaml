@@ -1,0 +1,44 @@
+# Phonetic dictionary configuration for SIMON.
+# Maps canonical terms to known misrecognitions and phonetic variants.
+
+phonetics:
+  entries:
+    navigate:
+      - novice gate
+      - never gate
+    describe:
+      - this tribe
+      - disk ripe
+    battery:
+      - butterfly
+      - better he
+    Simon:
+      - semen
+      - seaman
+      - salmon
+      - saimon
+      - simone
+    "read text":
+      - red text
+      - reed text
+      - read test
+    stop:
+      - stock
+      - stalk
+      - stuff
+    help:
+      - health
+      - helped
+      - held
+    camera:
+      - canberra
+    volume:
+      - wall you
+      - wall him
+    emergency:
+      - a mercy
+      - emerging sea
+    VIT:
+      - vit
+      - wheat
+      - wit

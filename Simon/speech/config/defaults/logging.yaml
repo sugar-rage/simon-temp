@@ -1,0 +1,12 @@
+# ============================================================
+# SIMON Speech Subsystem — Logging Configuration
+# ============================================================
+
+monitoring:
+  log_level: INFO
+  log_file: null          # Set to a path for file logging
+  metrics_enabled: true
+  dashboard_enabled: false
+  dashboard_mode: tui     # "tui" or "web"
+  dashboard_port: 8765
+  health_check_interval_s: 30.0

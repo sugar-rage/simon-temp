@@ -1,0 +1,37 @@
+# Personal adaptation configuration for SIMON.
+
+adaptation:
+  # User profile settings
+  profile:
+    default_accent: ""
+    default_speed: 1.0
+    default_volume: 75
+    profile_dir: "data/profiles"
+
+  # Command history tracking
+  command_history:
+    max_actions: 200
+    persist_path: "data/command_history.json"
+
+  # Correction learner
+  corrections:
+    max_corrections: 500
+
+  # Accent adapter
+  accent:
+    # Custom accent prompts (in addition to built-in ones)
+    custom_prompts: {}
+
+  # Speaker verification
+  speaker:
+    model_source: "speechbrain/spkrec-ecapa-voxceleb"
+    model_cache_dir: "data/models/ecapa"
+    verification_threshold: 0.60
+    enrollment_samples: 3
+    voiceprint_dir: "data/voiceprints"
+    # Set to true to require speaker verification for all commands
+    require_verification: false
+    # Actions that always require verification (even if global is off)
+    verified_actions:
+      - emergency_call
+      - navigate

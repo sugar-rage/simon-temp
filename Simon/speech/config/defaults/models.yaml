@@ -1,0 +1,37 @@
+# ============================================================
+# SIMON Speech Subsystem — Model Configuration
+# ============================================================
+# Paths, sizes, and compute types for all ML models.
+
+stt:
+  engine: faster-whisper
+  model_size: medium
+  compute_type: float16
+  device: auto
+  language: en
+  word_timestamps: true
+  vad_filter: true
+  transcription_timeout_s: 15.0
+
+  # Confidence thresholds (per-action thresholds in safety.yaml)
+  default_confidence_threshold: 0.60
+  safety_confidence_threshold: 0.85
+  navigation_confidence_threshold: 0.80
+  low_confidence_threshold: 0.50
+
+  # Decoding defaults (overridden by adaptive decoder)
+  beam_size: 5
+  temperature: 0.0
+  patience: 1.0
+  best_of: 1
+  no_speech_threshold: 0.6
+  log_prob_threshold: -1.0
+  compression_ratio_threshold: 2.4
+
+# Speaker verification model (Phase 5)
+speaker:
+  enabled: false
+  model: ecapa-tdnn
+  verification_threshold: 0.65
+  enrollment_min_samples: 3
+  profiles_dir: data/speaker_profiles

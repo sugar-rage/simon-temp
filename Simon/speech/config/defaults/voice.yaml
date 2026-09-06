@@ -1,0 +1,13 @@
+# ============================================================
+# SIMON Speech Subsystem — TTS Voice Configuration
+# ============================================================
+
+tts:
+  engine: pyttsx3        # "neural" or "pyttsx3"
+  neural_model: xtts-v2  # Coqui XTTS-v2 (used when engine=neural)
+  speech_rate: 175        # Words per minute (pyttsx3)
+  volume: 0.9
+  cache_enabled: true
+  cache_max_entries: 500
+  streaming_enabled: true
+  streaming_chunk_size: 1  # Sentences per TTS chunk

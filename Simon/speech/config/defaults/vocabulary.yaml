@@ -1,0 +1,38 @@
+# Vocabulary configuration for SIMON.
+# Static vocabulary lists and settings.
+
+vocabulary:
+  # Command action words always included in STT prompt
+  command_words:
+    - navigate
+    - read
+    - describe
+    - stop
+    - help
+    - battery
+    - time
+    - date
+    - call
+    - emergency
+    - detect
+    - find
+    - volume
+    - camera
+    - scan
+    - Simon
+
+  # Location vocabulary settings
+  location:
+    max_entries: 200
+
+  # User vocabulary settings
+  user:
+    max_entries: 500
+    persist_path: "data/user_vocab.json"
+
+  # Session vocabulary settings
+  session:
+    max_entries: 100
+
+  # Max tokens in the STT biasing prompt
+  max_prompt_tokens: 200

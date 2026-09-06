@@ -1,0 +1,118 @@
+# ============================================================
+# SIMON Speech Subsystem — Master Speech Configuration
+# ============================================================
+# This file defines top-level speech parameters and the
+# command vocabulary.  Component-specific settings are in
+# their own YAML files (audio.yaml, models.yaml, etc.).
+
+# Wake word
+wakeword:
+  backend: openwakeword
+  wake_word: simon
+  detection_threshold: 0.7
+  cooldown_s: 1.0
+  always_listen: true
+
+# Voice Activity Detection
+vad:
+  backend: silero
+  speech_threshold: 0.5
+  min_speech_duration_ms: 250
+  min_silence_duration_ms: 700
+  max_speech_duration_s: 30.0
+  padding_duration_ms: 300
+
+# Command vocabulary — maps action names to trigger phrases.
+# The intent parser matches user speech against these phrases
+# (case-insensitive, after normalisation).
+command_map:
+  navigate:
+    - navigate to
+    - take me to
+    - go to
+    - directions to
+  read_text:
+    - read text
+    - read this
+    - read sign
+    - what does it say
+    - read
+  save_face:
+    - save face
+    - remember face
+    - save this face
+  identify_face:
+    - who is this
+    - identify face
+    - who is that
+  describe:
+    - describe
+    - what do you see
+    - what is around me
+    - describe surroundings
+  status:
+    - status
+    - system status
+    - what is happening
+  stop:
+    - stop
+    - shut up
+    - be quiet
+    - silence
+  cancel_nav:
+    - cancel navigation
+    - cancel
+    - stop navigation
+  toggle_indoor:
+    - indoor mode
+    - outdoor mode
+    - toggle indoor
+    - toggle outdoor
+  help:
+    - help
+    - what can you do
+    - commands
+  repeat:
+    - repeat
+    - say again
+    - what did you say
+  battery:
+    - battery
+    - battery level
+    - power
+  time:
+    - what time is it
+    - time
+    - current time
+  volume_up:
+    - volume up
+    - louder
+    - speak louder
+  volume_down:
+    - volume down
+    - softer
+    - speak softer
+  "yes":
+    - "yes"
+    - "yeah"
+    - "yep"
+    - "sure"
+    - "okay"
+    - "ok"
+    - "save them"
+    - "save this person"
+    - "save him"
+    - "save her"
+  "no":
+    - "no"
+    - "nope"
+    - "no thanks"
+    - "cancel"
+    - "don't save"
+    - "do not save"
+    - "don't save them"
+  "no_name":
+    - "no name"
+    - "don't give a name"
+    - "save without a name"
+    - "without a name"

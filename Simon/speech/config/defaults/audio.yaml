@@ -1,0 +1,20 @@
+# ============================================================
+# SIMON Speech Subsystem — Audio Pipeline Configuration
+# ============================================================
+
+audio:
+  sample_rate: 16000
+  channels: 1
+  frame_duration_ms: 32
+  buffer_size: 500
+
+  # DSP pipeline toggles
+  enable_noise_suppression: true
+  enable_agc: true
+  enable_echo_cancellation: false
+  noise_suppression_backend: deepfilternet  # "deepfilternet" or "spectral"
+
+  # AGC parameters
+  agc_target_rms: 3000.0
+  agc_min_gain: 0.5
+  agc_max_gain: 10.0

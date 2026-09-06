@@ -1,0 +1,60 @@
+# Safety validation configuration for SIMON.
+# Per-action safety rules: level, confidence thresholds, dangerous patterns.
+
+safety:
+  default_min_confidence: 0.50
+
+  rules:
+    navigate:
+      level: cautious
+      min_confidence: 0.70
+      confirm_message: "Navigate to {destination}. Is that correct?"
+      dangerous_patterns:
+        - "\\bhighway\\b"
+        - "\\bfreeway\\b"
+        - "\\bmotorway\\b"
+        - "\\bexpressway\\b"
+        - "\\binterstate\\b"
+
+    emergency_call:
+      level: dangerous
+      min_confidence: 0.85
+      confirm_message: "Calling emergency services. Confirm?"
+
+    call:
+      level: cautious
+      min_confidence: 0.75
+      confirm_message: "Call {contact}. Is that correct?"
+      dangerous_patterns:
+        - "\\b(911|112|999|100|108)\\b"
+
+    read_text:
+      level: safe
+      min_confidence: 0.50
+
+    describe_scene:
+      level: safe
+      min_confidence: 0.50
+
+    stop:
+      level: safe
+      min_confidence: 0.45
+
+    help:
+      level: safe
+      min_confidence: 0.40
+
+    battery:
+      level: safe
+      min_confidence: 0.45
+
+    time:
+      level: safe
+      min_confidence: 0.40
+
+    date:
+      level: safe
+      min_confidence: 0.40
+
+  confirmation:
+    timeout_s: 10.0

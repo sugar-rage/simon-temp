@@ -1,0 +1,19 @@
+# Navigation Subsystem Configuration Defaults
+
+navigation:
+  gps:
+    provider: "serial"
+    port: "/dev/ttyUSB0"
+    baud_rate: 9600
+    simulation_route_file: null
+
+  routing:
+    primary_router: "osrm"
+    osrm_url: "http://router.project-osrm.org"
+    fallback_router: "osm_graph"
+    cache_dir: "data/routing_cache"
+
+  guidance:
+    announce_distance_m: 30.0
+    off_route_threshold_m: 25.0
+    arrival_threshold_m: 10.0

@@ -1,0 +1,11 @@
+# ============================================================
+# SIMON Speech Subsystem — Device Configuration
+# ============================================================
+
+audio:
+  # Preferred device ID — set to a specific PortAudio device index
+  # to force a particular microphone.  Leave null for auto-detect.
+  preferred_device_id: null
+
+  # Device health monitoring
+  device_poll_interval_s: 3.0

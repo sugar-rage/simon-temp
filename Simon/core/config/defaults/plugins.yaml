@@ -1,0 +1,6 @@
+# Plugin System Configuration Defaults
+
+plugins:
+  enabled: true
+  plugin_dir: "plugins"
+  auto_discover: true

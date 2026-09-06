@@ -1,0 +1,19 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Temporary folders
+temp/
+
+# AI models
+*.onnx
+*.pt
+*.pth
+
+# VS Code
+.vscode/
+
+# Windows
+Thumbs.db
+Desktop.ini

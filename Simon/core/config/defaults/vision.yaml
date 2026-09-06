@@ -1,0 +1,40 @@
+# Vision Subsystem Configuration Defaults
+
+vision:
+  camera:
+    device_index: 0
+    width: 640
+    height: 480
+    fps: 30
+    auto_reconnect: true
+    reconnect_delay_s: 2.0
+    frame_buffer_size: 5
+
+  detection:
+    model: "yolov8n.pt"
+    confidence_threshold: 0.5
+    nms_threshold: 0.4
+    device: "auto"
+    max_detections: 50
+
+  ocr:
+    primary_engine: "pytesseract"
+    fallback_engine: "easyocr"
+    languages:
+      - en
+    confidence_threshold: 0.3
+
+  face:
+    model: "buffalo_l"
+    database_dir: "data/faces"
+    similarity_threshold: 0.4
+    detection_interval_frames: 5
+    known_person_reannounce_timeout_s: 300.0
+
+  depth:
+    enabled: false
+    model: "MiDaS_small"
+    device: "auto"
+
+  scene_analysis_interval_frames: 30
+  ocr_interval_frames: 10

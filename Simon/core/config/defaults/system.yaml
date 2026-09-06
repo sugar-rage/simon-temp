@@ -1,0 +1,26 @@
+# SIMON System Configuration — Global Defaults
+# This file contains the base configuration for the entire SIMON system.
+# Per-subsystem configs can override values via deep merge.
+
+log_level: "INFO"
+log_file: "simon.log"
+log_dir: "logs"
+data_dir: "data"
+debug: false
+
+event_bus_rate_limit_s: 0.05
+event_bus_queue_size: 10000
+watchdog_interval_s: 5.0
+health_check_interval_s: 30.0
+
+safety:
+  enabled: true
+  hazard_cooldown_s: 3.0
+  critical_distance_m: 2.0
+  warning_distance_m: 5.0
+  vehicle_classes:
+    - car
+    - truck
+    - bus
+    - motorcycle
+    - bicycle
